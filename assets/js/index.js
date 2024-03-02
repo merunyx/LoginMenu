@@ -16,14 +16,21 @@ var loginUI = new Vue({
         }
     },
     methods: {
+        open(isFirst){
+            this.show = true;
+            this.pageData = isFirst ? 'auth' : 'register';
+        },
+        disable(){
+            this.show = false;
+        },
         setPage(page) {
             this.pageData = page;
         },
         onPlay() {
-            mp.trigger("server.onLogin", this.dataLogin.Login, this.dataLogin.Password);
+            mp.trigger("client.onLogin", this.dataLogin.Login, this.dataLogin.Password);
         },
         onRegister() {
-            mp.trigger("server.onLogin", this.dataRegister.Login, this.dataRegister.Email, this.dataRegister.Password, this.dataRegister.repeatPassword);
+            mp.trigger("client.onLogin", this.dataRegister.Login, this.dataRegister.Email, this.dataRegister.Password, this.dataRegister.repeatPassword);
         },
     }
 });
