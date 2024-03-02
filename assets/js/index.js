@@ -30,7 +30,7 @@ var loginUI = new Vue({
             mp.trigger("client.onLogin", this.dataLogin.Login, this.dataLogin.Password);
         },
         onRegister() {
-            mp.trigger("client.onLogin", this.dataRegister.Login, this.dataRegister.Email, this.dataRegister.Password, this.dataRegister.repeatPassword);
+            mp.trigger("client.onRegister", this.dataRegister.Login, this.dataRegister.Email, this.dataRegister.Password, this.dataRegister.repeatPassword);
         },
     }
 });
