@@ -1,6 +1,6 @@
 # FrontEnd Login and Register page for RAGE MP
 
-Сделано специально для конкурса от (ragemp.pro)(https://ragemp.pro/threads/novogodnij-konkurs-2024-razvivaem-portal-vmeste.9661/)
+Сделано для практики
 
 ## Events
 `client.onLogin отправка данных авторизации на clientSide`
