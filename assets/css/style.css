@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    user-select: none;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+a, p {
+    margin: 0;
+}
+
+img {
+    pointer-events: none;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+    animation: slide-Enter .4s forwards ease;
+}
+
+.fade-enter, .fade-leave-to  {
+    opacity: 0;
+    animation: slide-Enter .4s forwards ease;
+}
+
+@keyframes slide-Enter {
+    from {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-Leave {
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.fullscrean {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background: #0A0B11;
+}
+
+.svgLine img {
+    width: 100%; 
+    height: 100vh;
+}
+
+.login_block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4vh;
+    top: 50%;
+    left: 8vh;
+    transform: translate(0, -50%);
+}
+
+.bg_right_personage {
+    position: absolute;
+    right: 0;
+    width: 160vh;
+    height: 100%;
+}
+
+.login_block-name {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.login_block-line {
+    width: 29vh;
+    height: .1vh;
+    background: #2E3443;
+}
+
+.login_block-name a {
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+.login_block-description {
+    width: 45vh;
+    color: #41485A;
+    font-weight: 500;
+    font-size: 1.8vh;
+}
+
+.login_block-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: .65vh;
+    width: 44.3vh;
+    height: fit-content;
+}
+
+.login_block-inputs_input {
+    display: flex;
+    align-items: center;
+}
+
+.login_block-inputs_input input {
+    width: 100%;
+    height: 7vh;
+    outline: none;
+    background: #10131B;
+    border-radius: .6vh;
+    font-size: 1.6vh;
+    text-indent: 8vh;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+}
+
+.login_block-inputs_input input:focus + .input_icon svg {
+    fill: #fff;
+}
+
+.login_block-inputs_input input:focus + .input_icon {
+    border: .2vh solid #388BE4;
+}
+
+.input_icon {
+    position: absolute;
+    width: 4.8vh;
+    height: 4.8vh;
+    background: #151924;
+    border-radius: .4vh;
+    display: flex;
+    align-items: center;
+    border: .2vh solid #151924;
+    transition: .33s all;
+    justify-content: center;
+    margin-left: 1vh;
+}
+
+.input_icon svg {
+    width: 2.45vh;
+    height: 2.45vh;
+    fill: #343E51;
+    transition: .33s all;
+}
+
+@media (max-width: 718px) {
+    .bg_right_personage {
+        margin-right: -20vh;
+    }
+}
+
+.login_block-button {
+    width: 44.3vh;
+    height: 6.6vh;
+    background: linear-gradient(90deg, #449AFF 0.07%, #2C7BC6 98.27%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .45vh;
+    font-size: 2vh;
+    transition: opacity .33s;
+}
+
+.login_block-button:hover {
+    opacity: .7;
+}
+
+.login_block-setpage {
+    color: #41485A;
+    font-family: 500;
+    font-size: 1.7vh;
+}
+
+.login_block-setpage b {
+    color: #3789E1;
+    font-weight: 600;
+}
